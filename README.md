@@ -1,131 +1,100 @@
-# 🏠 Smart Real-Estate Price Analytics
+# 🏠 Smart Real Estate Price Analytics
 
-**End-to-End Data Analytics Project using Python**
+**End-to-End Data Analytics Project Using Python**
 
-# 📌 Project Overview
+## 📌 Project Overview
 
-- This project focuses on analyzing real-estate housing data to identify the key factors influencing house prices.
-- It demonstrates an end-to-end Data Analytics workflow, including data cleaning, missing value treatment, exploratory data analysis (EDA), data visualization, and business insight generation using Python.
-- The dataset contains real-world issues such as missing values and outliers, making this project highly relevant for industry-level data analyst roles.
+Smart Real Estate Price Analytics is a data analytics project that analyzes housing data to understand the main factors affecting house prices. This project follows the complete data analytics process, including data cleaning, handling missing values, Exploratory Data Analysis (EDA), data visualization, and generating business insights using Python.
 
-# 🎯 Project Objectives
+The dataset contains missing values and outliers, making it useful for practicing real-world data analytics skills.
 
-- Clean and preprocess raw housing data
-- Handle missing values using appropriate statistical methods
-- Perform Exploratory Data Analysis (EDA)
-- Visualize data using Matplotlib and Seaborn
-- Identify price-driving factors in the housing market
-- Generate actionable business insights
+## 🎯 Project Objectives
 
-# 🛠️ Skills & Tools Used (ATS Optimized)
+- Clean and prepare raw housing data.
+- Handle missing values using suitable statistical methods.
+- Perform Exploratory Data Analysis (EDA).
+- Create visualizations using Matplotlib and Seaborn.
+- Identify the main factors affecting property prices.
+- Generate useful insights for real estate buyers, sellers, and investors.
+
+## 🛠️ Skills and Tools Used
 
 - Python
-- NumPy
-- Pandas
-- Data Cleaning & Preprocessing
+- NumPy and Pandas
+- Data Cleaning and Preprocessing
 - Missing Value Treatment
 - Exploratory Data Analysis (EDA)
 - Data Visualization
-- Matplotlib
-- Seaborn
+- Matplotlib and Seaborn
 - Business Analytics
 
-# 📂 Dataset Information
+## 📂 Dataset Information
 
-**Dataset Name:** King County House Sales Dataset (with NaN values)
-**Rows:** 21,613
-**Columns:** 22
-**Target Variable**: price
-**_Key Features:_**
-**Property size:** sqft_living, sqft_lot
-**Structure:** bedrooms, bathrooms, floors
-**Quality:** grade, condition
-**Location:** zipcode, waterfront, view
-**Renovation & construction**: yr_built, yr_renovated
+**Dataset:** King County House Sales Dataset
 
-# 🔍 Project Workflow
-## 1️⃣ Data Loading & Understanding
+- **Rows:** 21,613
+- **Columns:** 22
+- **Target Variable:** `price`
 
-- Loaded dataset using Pandas
-- Checked shape, data types, and summary statistics
-- Identified irrelevant and missing data
+**Important Features:**
+- Property size: `sqft_living`, `sqft_lot`
+- Structure: `bedrooms`, `bathrooms`, `floors`
+- Quality: `grade`, `condition`
+- Location: `zipcode`, `waterfront`, `view`
+- Construction: `yr_built`, `yr_renovated`
 
-## 2️⃣ Data Cleaning & Preprocessing
+## 🔍 Project Workflow
 
-- Removed unnecessary index column (Unnamed: 0)
-- Converted date column to datetime format
-- Validated numerical and categorical features
+### 1. Data Loading and Understanding
+Loaded the dataset using Pandas and checked its size, data types, summary statistics, and missing values.
 
-## 3️⃣ Missing Value Treatment
+### 2. Data Cleaning and Preprocessing
+Removed the unnecessary index column, converted the date column into the correct datetime format, and checked the data for inconsistencies.
 
-**Missing values were found in:**
+### 3. Missing Value Treatment
+Missing values were identified in the `bedrooms` and `bathrooms` columns. Median imputation was used to fill these missing values while reducing the influence of outliers.
 
-1. bedrooms
-2. bathrooms
+### 4. Exploratory Data Analysis (EDA)
+Created histograms, scatter plots, box plots, and correlation heatmaps to study price distribution and understand the relationships between property features and house prices.
 
-**Method Used:**
-- Median imputation was applied to preserve data distribution and avoid the impact of outliers.
+### 5. Feature Engineering
+Created three new features:
+- `house_age`: Calculates the age of the property.
+- `is_renovated`: Identifies whether a property has been renovated.
+- `price_per_sqft`: Calculates the price per square foot for property comparison.
 
-## 4️⃣ Exploratory Data Analysis (EDA)
+### 6. Segment-Wise Analysis
+Grouped properties into budget, mid-range, and luxury segments to compare pricing patterns across different market categories.
 
-**EDA was performed using:**
-1. Histograms
-2. Scatter plots
-3. Box plots
-4. Correlation heatmaps
-**Key Analysis Areas:**
-1. Price distribution
-2. Relationship between price and living area
-3. Impact of bedrooms, bathrooms, and grade
-4. Effect of renovation, waterfront, and view
-5. Location-based price variation
-
-## 5️⃣ Feature Engineering
-
-- New analytical features were created to improve insights:
-- house_age – Age of the house
-- is_renovated – Renovation indicator
-- price_per_sqft – Fair price comparison metric
-
-## 6️⃣ Segment-Wise Analysis
-
-**Properties were analyzed across:**
-- _Budget homes_
-- _Mid-range homes_
-- _Luxury homes_
-- This helped in understanding different pricing behaviors across market segments.
-
-## 7️⃣ Data Visualization Dashboard
-
-- A user-friendly analytical dashboard was built using:
-a. Matplotlib
-b. Seaborn
-- The dashboard clearly communicates insights for non-technical stakeholders.
+### 7. Data Visualization
+Created visualizations using Matplotlib and Seaborn to present the findings in a clear and understandable way.
 
 ## 📊 Key Insights
 
-1. Living area (sqft_living) is the strongest price driver
-2. Construction grade significantly impacts house prices
-3. Bathrooms influence price more than bedrooms
-4. Renovated and waterfront properties form premium segments
-5. Lot size alone has limited impact on pricing
+1. Living area is an important factor affecting house prices.
+2. Construction grade has a significant relationship with property prices.
+3. Bathrooms may provide more pricing insight than bedroom count.
+4. Renovated and waterfront properties can belong to premium market segments.
+5. Lot size alone may not fully explain property prices.
 
 ## 📈 Business Recommendations
 
-1. Focus on improving construction quality rather than increasing bedroom count
-2. Renovation offers strong return on investment
-3. Waterfront and high-view properties should be marketed as premium assets
-4. Buyers should prioritize living area over number of rooms
+1. Consider living area and construction quality when evaluating properties.
+2. Evaluate renovation costs against potential increases in property value.
+3. Highlight waterfront access and attractive views when marketing premium properties.
+4. Compare properties using price per square foot and location.
 
-## ⚠️ Limitations & Assumptions
+## ⚠️ Limitations and Assumptions
 
 **Limitations:**
+- Property prices have not been adjusted for inflation.
+- Location analysis is limited to ZIP code information.
+- The project focuses on data analysis and does not include a predictive model.
 
-- No inflation adjustment
-- Location limited to zipcode level
-- No predictive modeling included
+**Assumptions:**
+- The dataset reasonably represents the housing market during the recorded period.
+- The analysis does not account for major economic changes over time.
 
-## **Assumptions:**
+## ✅ Conclusion
 
-- Data reflects fair market conditions
-- No major economic fluctuations during the period
+This project helped me develop practical skills in Python, data cleaning, data preprocessing, exploratory data analysis, and data visualization. It also helped me understand how property features influence housing prices and how data-driven insights can support better real estate decisions.
